@@ -12,6 +12,8 @@ public class ControlTablaMultiplicar {
 	
 	/** Tabla de multiplicar activa. */
 	private TablaMultiplicar tabla;
+	
+	private VistaMenu menúPrincipal;
 
 	public ControlTablaMultiplicar(){
 		init();

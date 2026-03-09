@@ -4,23 +4,28 @@ import java.util.Scanner;
 
 public class VistaGeneral {
 	
+	private String FORMATO_PRINTF_MOSTRARTEXTO = "Pulse <intro> para continuar...";
+	private String FORMATO_PRINTF_MOSTRARAVISO = "Estamos en la tabal del %d";
+	
+	
+	
 	Scanner miScanner = new Scanner(System.in);
 	
 	
 	public void mostrarTexto(String texto) {
-		
+		System.out.print(texto);
 	}
 	
 	public void mostrarAviso(String texto) {
-		
+		System.out.print(texto);
 	}
 	
 	public void mostrarTítulo(String texto) {
-		
+		System.out.printf("%s%n%s%n%s", texto, "_________", "_________");
 	}
 	
 	public void mostrarTítulo2(String texto) {
-		
+		System.out.printf("%s%n%s", texto, "_________");
 	}
 	
 	public int pedirnumero(String texto) {
@@ -38,7 +43,7 @@ public class VistaGeneral {
 	}
 	
 	public void pausa (String texto) {
-		
+		System.out.print(texto);
 	}
 	
 	public boolean pedirConfirmacion(String texto) {

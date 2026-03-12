@@ -1,5 +1,6 @@
 package jcolonia.daw2025.tablasmvc;
 
+import java.util.List;
 import java.util.Scanner;
 
 /**
@@ -27,7 +28,7 @@ public class VistaGeneral {
 	 * Obeto que se utiliza para leer datos de entrada.
 	 * Permite capturar los datos que escribe el usuario por consola.
 	 */
-	Scanner miScanner = new Scanner(System.in);
+	private Scanner miScanner = new Scanner(System.in);
 	
 	/**
 	 * Imprime un texto en la consola con una linea en blanco antes
@@ -155,11 +156,29 @@ public class VistaGeneral {
 	    return confirmacion;
 	}
 	
-	public mostrarlista(List<String> lista) {
+	/**
+	 * Muestra por consola todos los elementos de la lista de cadenas de texto
+	 * @param lista La lista de textos que se va a mostrar
+	 */
+	public void mostrarLista(List<String> lista) {
+		if(lista == null) {
+			mostrarAviso("La lista está vacía.");
+			return;
+		}
 		
+		System.out.println("/--- Contenido de la lista ---/");
+		for( String elemento : lista) {
+			System.out.println("- " + elemento);
+		}
 	}
 	
-	public getmiScanner() {
+	/**
+	 * Obtiene la instancia del Scanner.
+	 * @return el objeto Scanner
+	 */
+	public Scanner getMiScanner() {
+		
+		return miScanner;
 		
 	}
 }

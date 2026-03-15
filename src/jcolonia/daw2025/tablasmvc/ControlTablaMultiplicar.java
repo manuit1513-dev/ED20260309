@@ -126,7 +126,9 @@ public class ControlTablaMultiplicar {
 		
 		List<String> datosLimpios = tabla.toListaExportacion();
 		
-		vista.mostrarTexto("Exportando " + datosLimpios.size() + " líneas...");
+		String mensajeExportación = String.format("Exportando %d lineas...", datosLimpios.size());
+		
+		vista.mostrarTexto(mensajeExportación);
 	}
 	
 	/**

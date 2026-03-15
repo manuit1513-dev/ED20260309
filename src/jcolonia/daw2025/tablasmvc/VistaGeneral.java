@@ -23,12 +23,10 @@ public class VistaGeneral {
 	 */
 	private String FORMATO_PRINTF_MOSTRARAVISO = "[AVISO]: %s%n";
 	
-	
 	/**
-	 * Obeto que se utiliza para leer datos de entrada.
-	 * Permite capturar los datos que escribe el usuario por consola.
+	 * 
 	 */
-	private Scanner miScanner = new Scanner(System.in);
+	Scanner ScEntrada = ScannerSingleton.getInstancia();
 	
 	/**
 	 * Imprime un texto en la consola con una linea en blanco antes
@@ -110,14 +108,14 @@ public class VistaGeneral {
 	public int pedirNumero(String texto) {
 	    System.out.print(texto);
 	    
-	    while (!miScanner.hasNextInt()) {
+	    while (!ScEntrada.hasNextInt()) {
 	        System.out.println("Error: No has introducido un número válido.");
-	        miScanner.next();
+	        ScEntrada.next();
 	        System.out.print(texto);
 	    }
 	    
-	    int numero = miScanner.nextInt();
-	    miScanner.nextLine();
+	    int numero = ScEntrada.nextInt();
+	    ScEntrada.nextLine();
 	    return numero;
 	}
 	
@@ -131,7 +129,7 @@ public class VistaGeneral {
 	 */
 	public void pausa (String texto) {
 		System.out.print(FORMATO_PRINTF_MOSTRARTEXTO);
-		miScanner.nextLine();
+		ScEntrada.nextLine();
 	}
 	
 	/**
@@ -144,15 +142,15 @@ public class VistaGeneral {
 	public boolean pedirConfirmacion(String texto) {
 	    System.out.print(texto + " (S/N): ");
 	    
-	    while (!miScanner.hasNextBoolean()) {
+	    while (!ScEntrada.hasNextBoolean()) {
 	        System.out.println("Error: Debe introducir 'S' o 'N'.");
-	        miScanner.next();  
+	        ScEntrada.next();  
 	        System.out.print(texto + " (S/N): ");
 	        
 	    }
 	    
-	    boolean confirmacion = miScanner.nextBoolean();
-	    miScanner.nextLine();
+	    boolean confirmacion = ScEntrada.nextBoolean();
+	    ScEntrada.nextLine();
 	    return confirmacion;
 	}
 	
@@ -176,9 +174,9 @@ public class VistaGeneral {
 	 * Obtiene la instancia del Scanner.
 	 * @return el objeto Scanner
 	 */
-	public Scanner getMiScanner() {
+	public Scanner getScEntrada() {
 		
-		return miScanner;
+		return ScEntrada;
 		
 	}
 }

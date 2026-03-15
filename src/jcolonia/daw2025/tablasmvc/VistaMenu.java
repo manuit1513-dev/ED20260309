@@ -65,7 +65,6 @@ public class VistaMenu extends VistaGeneral{
 		return eleccion;
 	}
 	
-	@SuppressWarnings("javadoc")
 	public void mostrarTexto(String texto) {
 		System.out.println(texto);
 	}

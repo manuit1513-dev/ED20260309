@@ -54,17 +54,14 @@ public class VistaGeneral {
 		    String reset = "\u001B[0m";
 		    int longitudTítulo = texto.length();
 
-		    // Dibujamos la esquina y la línea superior
 		    System.out.print(azul + "x");
 		    for (int i = 0; i < longitudTítulo + 2; i++) {
 		        System.out.print("=");
 		    }
 		    System.out.println("x");
 
-		    // Cuerpo del título
 		    System.out.println("‖ " + texto + " ‖");
 
-		    // Dibujamos la esquina y la línea inferior
 		    System.out.print("x");
 		    for (int i = 0; i < longitudTítulo + 2; i++) {
 		        System.out.print("=");

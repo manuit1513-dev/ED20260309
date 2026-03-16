@@ -59,7 +59,7 @@ public class TablaMultiplicar {
 		List<String> listaPantalla = new ArrayList<>();
 		listaPantalla.add("=== Tabla del " + numero + "===");
 		listaPantalla.addAll(listaTextos);
-		listaPantalla.add("===================");
+		listaPantalla.add("==================");
 		
 		return listaPantalla;
 	}

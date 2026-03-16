@@ -11,8 +11,8 @@ public class LanzadorTablaMultiplicar {
 	public static void main (String[] argumentos){
 		ControlTablaMultiplicar programa;
 		
-		programa = new ControlTablaMultiplicar()
+		programa = new ControlTablaMultiplicar();
 		
-		programa.bucleprincipal();
+		programa.buclePrincipal();
 	}
 }

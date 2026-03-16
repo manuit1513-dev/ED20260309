@@ -4,21 +4,22 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * 
+ * Refleja la interfaz de usuario que está especializada en la gestión de menús.
  */
 public class VistaMenu extends VistaGeneral{
 	/**
-	 * 
+	 * El texto que se muestra como título del menú
 	 */
 	private String titulo;
 	/**
-	 * 
+	 * Lista de etiquetas que representan las opciones del menú
 	 */
 	private List<String> opciones;
 	
 	/**
-	 * @param titulo
-	 * @param opciones
+	 * Crea un menú nuevo con su título y un conjunto de opciones
+	 * @param titulo del menú
+	 * @param opciones las posibles acciones que tiene el menú
 	 */
 	public VistaMenu (String titulo, List<String> opciones) {
 		this.titulo = titulo;
@@ -26,14 +27,15 @@ public class VistaMenu extends VistaGeneral{
 	}
 	
 	/**
-	 * 
+	 * Muestra el título del menú formateado que 
+	 * ha sido definido en la clase superior {@link VistaGeneral}
 	 */
 	public void mostrarTítulo() {
 		super.mostrarTítulo(titulo);
 	}
 	
 	/**
-	 * 
+	 * Imprime por consola la lista de las opciones del menú.
 	 */
 	public void mostrarOpciones() {
 		for (int i = 0; i < opciones.size(); i++) {
@@ -65,6 +67,9 @@ public class VistaMenu extends VistaGeneral{
 		return eleccion;
 	}
 	
+	/**
+	 * Muestra el texto.
+	 */
 	public void mostrarTexto(String texto) {
 		System.out.println(texto);
 	}

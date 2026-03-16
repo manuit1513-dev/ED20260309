@@ -30,7 +30,8 @@ public class ControlTablaMultiplicar {
 	private VistaGeneral vista;
 
 	/**
-	 * 
+	 * Establece una {@link VistaGeneral} por defecto y lanza
+	 * el proceso de preparación de datos mediante {@link init()}.
 	 */
 	public ControlTablaMultiplicar(){
 		vista  =  new VistaGeneral();
@@ -94,6 +95,8 @@ public class ControlTablaMultiplicar {
 			vista.mostrarAviso("No hay ninguna tabla activa. Seleccione 'Cambiar tabla' primero.");
 			return;
 		}
+		
+		vista.mostrarTítulo("Tabla del " + tabla.getNumero());
 
 		List<String> lineas = tabla.toListaPantalla();
 		

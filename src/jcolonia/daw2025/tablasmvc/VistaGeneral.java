@@ -24,7 +24,8 @@ public class VistaGeneral {
 	private String FORMATO_PRINTF_MOSTRARAVISO = "[AVISO]: %s%n";
 	
 	/**
-	 * 
+	 * Iniciliza el Scanner mediante singleton para centralizar 
+	 * todo el flujo de entrrada de la aplicación.
 	 */
 	Scanner ScEntrada = ScannerSingleton.getInstancia();
 	
@@ -161,7 +162,6 @@ public class VistaGeneral {
 			return;
 		}
 		
-		System.out.println("/--- Contenido de la lista ---/");
 		for( String elemento : lista) {
 			System.out.println("- " + elemento);
 		}

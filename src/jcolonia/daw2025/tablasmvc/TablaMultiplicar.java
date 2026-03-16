@@ -44,7 +44,7 @@ public class TablaMultiplicar {
 	}
 	
 	/**
-	 * 
+	 * Proporciona una copia de los datos de la tabla.
 	 * @return la lista sin formatear para exportar a archivo txt.
 	 */
 	public List<String> toListaExportacion(){
@@ -56,18 +56,24 @@ public class TablaMultiplicar {
 	 * @return La lista para que sea devuelta en pantalla
 	 */
 	public List<String> toListaPantalla(){
-		List<String> listaPantalla = new ArrayList<>();
-		listaPantalla.add("=== Tabla del " + numero + "===");
-		listaPantalla.addAll(listaTextos);
-		listaPantalla.add("==================");
 		
-		return listaPantalla;
+		return this.listaTextos;
 	}
+	
 	/**
-	 * 
+	 * Concatena todas las líneas de la tabla generada 
+	 * y utiliza un salto de línea como separador.
 	 */
 	@Override
 	public String toString() {
 		return String.join("\n", toListaPantalla());
+	}
+	
+	/**
+	 * Devuelve el número activo de la tabla.
+	 * @return el número de la tabla 
+	 */
+	public int getNumero() {
+		return this.numero;
 	}
 }

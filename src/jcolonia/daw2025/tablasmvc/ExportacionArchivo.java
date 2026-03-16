@@ -3,7 +3,9 @@ package jcolonia.daw2025.tablasmvc;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.List;
+import java.util.Scanner;
 
 /**
  * Clase encargada de la persistencia de datos en el sistema de archivos.
@@ -26,19 +28,15 @@ public class ExportacionArchivo {
      * @param contenidos Lista de strings (las líneas de la tabla de multiplicar).
      */
     public void guardar(List<String> contenidos) {
-        try {
-            Path directorioPadre = refArchivo.getParent();
+    	 try {
 
-            if (directorioPadre != null) {
-                Files.createDirectories(directorioPadre);
-            }
+    	        Files.write(this.refArchivo, contenidos);
 
-            Files.write(refArchivo, contenidos);
-            
-            System.out.println("Éxito: Archivo guardado en " + refArchivo.toAbsolutePath());
-            
-        } catch (IOException e) {
-            System.err.println("Error al procesar el archivo: " + e.getMessage());
-        }
+    	        System.out.println("¡Datos guardados correctamente en: " + this.refArchivo);
+    	        
+    	    } catch (IOException e) {
+    	        System.err.println("Error al intentar guardar el archivo: " + e.getMessage());
+    	    }
+    	
     }
 }

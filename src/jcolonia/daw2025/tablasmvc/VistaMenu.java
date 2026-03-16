@@ -57,7 +57,7 @@ public class VistaMenu extends VistaGeneral{
 		do {
 			eleccion = pedirNumero("Seleccione una opción: ");
 			
-			if(eleccion >= 0 && eleccion < opciones.size()) {
+			if(eleccion >= 0 && eleccion <= opciones.size()) {
 				esValido = true;
 			}else {
 				mostrarAviso("La opción seleccionada no existe. Inténtelo de nuevo");

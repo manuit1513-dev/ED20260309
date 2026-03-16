@@ -2,6 +2,8 @@ package jcolonia.daw2025.tablasmvc;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Scanner;
+
 
 /**
 * Núcleo de aplicación de consola de texto con menús. Aplicación
@@ -127,11 +129,30 @@ public class ControlTablaMultiplicar {
 			return;
 		}
 		
+		Scanner ScRuta = ScannerSingleton.getInstancia();
+    	
+		String separador = System.getProperty("file.separator");
+
+    	String rutaDefecto = String.format("%s%s%s",System.getProperty("user.home"), separador, "ArchivoExportado.txt");
+    	
+    	System.out.printf("Introduce la ruta |Pulsa ENTER para usar %s|", rutaDefecto);
+    	String entradaRuta = ScRuta.nextLine();
+    	
+    	String rutaFinal = entradaRuta.isEmpty() ? rutaDefecto : entradaRuta;
+    	
+    	System.out.printf("Exportando a ruta: %s\n", rutaFinal);
+    	
+    	ExportacionArchivo miExportacion = new ExportacionArchivo(rutaFinal);
+    	
+		
 		List<String> datosLimpios = tabla.toListaExportacion();
 		
 		String mensajeExportación = String.format("Exportando %d lineas...", datosLimpios.size());
 		
+		miExportacion.guardar(datosLimpios);
+		
 		vista.mostrarTexto(mensajeExportación);
+		
 	}
 	
 	/**

@@ -69,6 +69,7 @@ public class VistaMenu extends VistaGeneral{
 	
 	/**
 	 * Muestra el texto.
+	 * @param texto El texto
 	 */
 	public void mostrarTexto(String texto) {
 		System.out.println(texto);

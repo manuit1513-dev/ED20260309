@@ -3,15 +3,16 @@ package jcolonia.daw2025.tablasmvc;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.List;
-import java.util.Scanner;
 
 /**
  * Clase encargada de la persistencia de datos en el sistema de archivos.
  * Sigue el principio de responsabilidad única del modelo MVC.
  */
 public class ExportacionArchivo {
+    /**
+     * Path de la referencia del archivo
+     */
     private Path refArchivo;
     
     /**

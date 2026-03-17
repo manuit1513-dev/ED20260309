@@ -33,7 +33,7 @@ public class ControlTablaMultiplicar {
 
 	/**
 	 * Establece una {@link VistaGeneral} por defecto y lanza
-	 * el proceso de preparación de datos mediante {@link init()}.
+	 * el proceso de preparación de datos mediante {@link #init()}.
 	 */
 	public ControlTablaMultiplicar(){
 		vista  =  new VistaGeneral();
